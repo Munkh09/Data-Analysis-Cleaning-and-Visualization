@@ -1,29 +1,28 @@
-Task 1 Output:
+Top 10 pickup locations that yielded the highest average total earnings for taxi drivers in August 2019:
 
-PickupID TotalAmount Average
-221.0    143.96
-1.0      95.8413
-265.0    88.8895
-5.0      87.1709
-156.0    87.0467
-23.0     74.4929
-99.0     73.15
-176.0    70.7
-118.0    65.2594
-10.0     62.0481
+Pickup_ID Average_Total_Amount
+221.0     143.96
+1.0       95.8413
+265.0     88.8895
+5.0       87.1709
+156.0     87.0467
+23.0      74.4929
+99.0      73.15
+176.0     70.7
+118.0     65.2594
+10.0      62.0481
 
-Task 2 Output:
+Top 10 pickup and dropoff pair locations that yielded the highest average total earnings for taxi drivers in August 2019:
 
-PickupID DropoffID TotalAmount Average
-138.0    15.0      1762.97
-221.0    139.0     791.04
-217.0    265.0     450.3
-158.0    214.0     365.26
-150.0    265.0     337.42
-154.0    265.0     283.943
-124.0    265.0     242.865
-58.0     264.0     240.36
-83.0     265.0     237.727
-156.0    265.0     226.855
+Pickup_ID Dropoff_ID Average_Total_Amount
+138.0     15.0       1762.97
+221.0     139.0      791.04
+217.0     265.0      450.3
+158.0     214.0      365.26
+150.0     265.0      337.42
+154.0     265.0      283.943
+124.0     265.0      242.865
+58.0      264.0      240.36
+83.0      265.0      237.727
+156.0     265.0      226.855
 
-Task 3 and 4 Output are in the svg files
