@@ -1,0 +1,28 @@
+
+$1 == lastId {
+  sum=sum+$2
+  count++
+  if(NR==TotalLines){
+    toPrint(lastId, sum, count)
+  }
+}
+$1 != lastId {
+  toPrint(lastId, sum, count)
+  count=0
+  sum=0
+  lastId=$1
+  sum=sum+$2
+  count++
+}
+
+function toPrint(num, num2, num3){
+  if(num3 != 0){
+     print num " " (expr num2/num3)
+  }
+}
+
+
+  
+   
+   
+

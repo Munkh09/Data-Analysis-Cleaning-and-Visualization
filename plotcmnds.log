@@ -1,0 +1,59 @@
+Task 3:
+
+#use the local terminal to create a DAT file 
+#then we insert the data into the DAT file manually separating them with comma
+echo passenger.DAT
+#once the passenger.DAT file is filled out with 2 columns of numbers separated with comma, we can run the code
+#the passenger.DAT file is as the following
+1.0, 2.18349
+2.0, 2.19971
+3.0, 2.11896
+4.0, 1.982
+5.0, 2.21227
+6.0, 2.20123
+7.0, 7.42775
+8.0, 7.3375
+9.0, 4.3255
+
+#here are the gnuplot commands
+set boxwidth 0.6 relative
+set style fill solid 1.0
+set style histogram
+
+set datafile separator ','
+
+set out 'passenger.png'
+
+set title "Tip Passenger Count Correlation"
+set xlabel "Number of Passengers"
+set ylabel "Tip Amount"
+
+set yrange[0:10]
+
+plot 'passenger.dat' using 1:2:xtic(1) with boxes lc rgb 'gray' title "tip passenger count correlation"
+
+Task 4:
+#use the local terminal to create a DAT file again
+#then we insert the data into the DAT file manually separating with comma
+echo passenger2.DAT
+
+#once the passenger.DAT file is filled out with 2 columns of numbers separated with comma, we can run the code
+##here are the gnuplot commands
+#!/usr/local/bin/gnuplot -persist
+set style fill transparent solid 0.2 noborder
+
+set datafile separator ','
+
+set out 'passenger2.png'
+
+#set dummy u, v
+#set key fixed right top vertical Right noreverse enhanced #autotitle box lt black linewidth 1.000 dashtype solid
+#set parametric
+set title "Trip Distance Total Amount Average Correlation"
+set xlabel "Trip Distance"
+#set colorbox vertical origin screen 0.9, 0.2 size screen 0.05, 0.6 front  noinvert bdefault
+NO_ANIMATION = 1
+set autoscale x
+set autoscale y
+## Last datafile plotted: "hemisphr.dat"
+plot 'passenger2.dat' using 1:2 with circles lc rgb 'red'
