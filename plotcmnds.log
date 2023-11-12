@@ -1,5 +1,4 @@
-Plotting the Average Tip Amount and Passenger Count correlation:
-
+#Plotting the Average Tip Amount and Passenger Count correlation:
 #use the local terminal to create a DAT file 
 #then we insert the data into the DAT file manually separating them with comma
 echo passenger.DAT
