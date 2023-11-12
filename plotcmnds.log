@@ -1,19 +1,9 @@
-Task 3:
+Plotting the Average Tip Amount and Passenger Count correlation:
 
 #use the local terminal to create a DAT file 
 #then we insert the data into the DAT file manually separating them with comma
 echo passenger.DAT
 #once the passenger.DAT file is filled out with 2 columns of numbers separated with comma, we can run the code
-#the passenger.DAT file is as the following
-1.0, 2.18349
-2.0, 2.19971
-3.0, 2.11896
-4.0, 1.982
-5.0, 2.21227
-6.0, 2.20123
-7.0, 7.42775
-8.0, 7.3375
-9.0, 4.3255
 
 #here are the gnuplot commands
 set boxwidth 0.6 relative
@@ -32,7 +22,10 @@ set yrange[0:10]
 
 plot 'passenger.dat' using 1:2:xtic(1) with boxes lc rgb 'gray' title "tip passenger count correlation"
 
-Task 4:
+
+
+
+#Plotting the Average Total Earnings and Trip Distance correlation:
 #use the local terminal to create a DAT file again
 #then we insert the data into the DAT file manually separating with comma
 echo passenger2.DAT
