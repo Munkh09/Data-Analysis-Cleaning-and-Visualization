@@ -1,19 +1,19 @@
-Task 1:
+Finding the top 10 pickup locations that yielded the highest average total earning in August 2019:
 awk -F, '{print $8 " " $17}' ~/taxidata/2019-08.csv | sort -k 1 -n > sorted_task1data.txt
 vim sorted_task1data.txt #to delete the pickup_id total_amount line
 awk -f awk.scr -v TotalLines="$(wc -l < sorted_task1data.txt)" sorted_task1data.txt | sort -k 2 -nr | head -10 >> a3.txt
 
-Task 2:
+Finding the top 10 pickup and dropoff pair locations that yielded the highest average total earning in August 2019:
 awk -F, '{print $8 " " $9 " " $17}' ~/taxidata/2019-08.csv | sort -k 1,2 > sorted_task2data.txt
 sed -i '/total/d' sorted_task2data.txt #to delete the pulocationID dolocationID totalamount line
 awk -f awk.task2.scr -v TotalLines="$(wc -l < sorted_task2data.txt)" sorted_task2data.txt | sort -k 3 -nr | head -10
 
-Task 3:
+Finding the average tip amount for each possible number of passengers (1-9):
 awk -F, '{print $4 " " $14}' ~/taxidata/2019-08.csv | sort -k 1 -n > sorted_task3data.txt
 awk -f awk.task3.scr sorted_task3data.txt > sorted2_task3data.txt
 awk -f awk.scr -v TotalLines="$(wc -l < sorted2_task3data.txt)" sorted2_task3data.txt > task3data.txt
 
-Task 4:
+Finding the average total earnings for each possible trip distances (miles):
 awk -F, '{print $5 " " $17}' ~/taxidata/2019-08.csv | sed '/trip/d' | sort -k 1 -n > sorted_task4data.txt
 awk -f awk.scr -v TotalLines="$(wc -l < sorted_task4data.txt)" sorted_task4data.txt > task4data.txt
 #use vim to delete the first line that does not have distance
