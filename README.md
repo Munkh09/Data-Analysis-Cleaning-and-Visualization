@@ -4,5 +4,6 @@
 - plotcmnds.log contains the commands performed on Gnuplot
 - a3.txt contains the top 10 pickup locations and the top 10 pickup and dropoff pair locations that yielded the highest 
   average "total amount" in August 2019
-- a3t3.svg contains the correlation chart between tip amount and passenger count
-  a3t4.svg contains the correlation chart between trip distance (miles) and average total earnings amount ($)
+- a3t3.svg contains the correlation chart between average tip amounts and passenger counts
+  a3t4.svg contains the correlation chart between trip distances (miles) and average total earnings amounts ($)
+- awk.scr awk.task2.scr awk.task3.scr are the awk script files I wrote that are used for finding average total earnings    and tip amounts
